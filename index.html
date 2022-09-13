@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="./style.css">
-
+    <script src="./index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     
 <main>
+    
     <div id="image">
+        
         <div class="logo">
-            <h4>Travel With Us</h4>
+           
         </div>
-   
+        <img src="./logo.png" alt="logo">
+        <h4> Love To Travel</h4>
      <div class="link">
          <p>This photo is taken by <a href="https://unsplash.com/photos/UIw1pmwTYi0"> Mike Crawat</a></p> </div>
      <img src="./road.jpg" alt="A van">
@@ -35,52 +43,90 @@
       <form action="#" method="post">
         <fieldset>
             <legend>Personal Information</legend>
-            <label for="first-name">First Name</label>
-            <input type="text" name="first-name" id="first-name" required>
-            <label for="second-name">Second Name</label>
-            <input type="text" name="second-name" id="second-name" required>
-            
-            <label for="pass">Password</label>
-            <input type="password" name="pass" id="pass" required>
-            <label for="pass-conf">Confirm Password</label>
-            <input type="password" name="pass-conf" id="pass-conf" required>
-            <label for="phone">Phone Number</label>
-            <input type="tel" name="phone" id="phone" required>
-            <label for="mail">E-mail</label>
-            <input type="email" name="mail" id="mail" required>
-            <label for="age">How Old Are You?</label>
-            <input type="number" name="age" id="age" min="18" max="75" required>
+            <div class="line">
+                <div class="in">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" required>
+                </div>
+                <div class="in">
+                    <label for="second-name">Second Name</label>
+                    <input  type="text" name="second-name" id="second-name" required>
+                </div>
+                <br style="clear:both;" />
+            </div>
+
+            <div class="line">
+                <div class="in">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass"  minlength="8" required>
+                </div>
+                <div class="in">
+                    <label for="pass-conf">Confirm Password</label>
+                    <input  type="password" name="pass-conf" id="pass-conf"  minlength="8" required>
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="in">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" pattern="[0-9]+" minlength="10" maxlength="10" name="phone" id="phone" required>
+                </div>
+                <div class="in">
+                    <label for="mail">E-mail</label>
+                    <input type="email" name="mail" id="mail" required>
+                </div>
+                <div class="in">
+                    <label for="age">How Old Are You?</label>
+                    <input type="number" name="age" id="age" min="18" max="75" required>
+                </div>
+            </div>
         </fieldset>
 
         <fieldset>
-            <legend>traveling Experience</legend>
-            <label for="last-travel">When Was The Last Time You Traveled?</label>
-            <input type="date" name="last-travel" id="last-travel">
-            <label for="fav-continent">What Is Your Favorite Continent</label>
-            <select name="fav-continent" id="fav-continent">
-                 <option value="asi">Asia</option>
-                 <option value="afr">Africa</option>
-                 <option value="eur">Europe</option>
-                 <option value="nor">North America</option>
-                 <option value="sou">South America</option>
-                 <option value="oce">Oceania</option>
-                 <option value="ant">Antarctica</option>
-            </select>
-            <label for="preference">Do You Prefer?</label>
-            <input type="radio" name="preference" id="preference" value="alone">
-            Travel Alone</input>
-            <input type="radio" name="preference" id="preference" value="friends">
-            Travel With Friends And Family</input>
-            <input type="radio" name="preference" id="preference" value="strangers" >
-            Travel With Stranger People</input>
+            <legend>Traveling Experience</legend>
             
-            <label for="relation">Tell Us About Your Relation With traveling</label>
-            <textarea name="relation" id="rel" cols="30" rows="10" required></textarea>
-            <label for="imgs">Upload Your Pictures</label>
-            <input type="file" name="imgs" id="imgs"
-            multiple="multiple" accept="image/*"required>
+                <div class="line">
+                    <div class="in">
+                        <label for="last-travel">When Was The Last Time You Traveled?</label>
+                        <input type="date" name="last-travel" id="last-travel" required>
+                    </div>
+                    
+                        <div class="in">
+                            <label for="fav-continent">What Is Your Favorite Continent</label>
+                            <select name="fav-continent" id="fav-continent" required>
+                                 <option value="asi">Asia</option>
+                                 <option value="afr">Africa</option>
+                                 <option value="eur">Europe</option>
+                                 <option value="nor">North America</option>
+                                 <option value="sou">South America</option>
+                                 <option value="oce">Oceania</option>
+                                 <option value="ant">Antarctica</option>
+                    
+                            </select>
+                        </div>
+                </div>
+
+            <div class="in">
+                <label for="preference">Do You Prefer?</label>
+                <input type="radio" name="preference" id="preference" value="alone">
+                Travel Alone</input>
+                <input type="radio" name="preference" id="preference" value="friends">
+                Travel With Friends And Family</input>
+                <input type="radio" name="preference" id="preference" value="strangers" >
+                Travel With Stranger People</input>
+                
+            </div>
+            <div class="in">
+                <label for="relation">Tell Us About Your Relationship With traveling</label>
+                <textarea name="relation" id="rel" cols="50" rows="5" required></textarea>
+            </div>
+            <div class="in">
+                <label class="custom-file-upload" for="imgs">Upload Your Pictures</label>
+                <input type="file"  name="imgs" id="imgs"
+                multiple="multiple" accept="image/*"required>
+            </div>
         </fieldset>
-        <button>Submit</button>
+        <button type="submit" >Submit</button>
       </form>
     </div>
 </main>
