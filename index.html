@@ -9,7 +9,81 @@
 
 </head>
 <body>
-<div id="img"> </div>
-<div id="frm"></div>
+    
+<main>
+    <div id="image">
+        <div class="logo">
+            <h4>Travel With Us</h4>
+        </div>
+   
+     <div class="link">
+         <p>This photo is taken by <a href="https://unsplash.com/photos/UIw1pmwTYi0"> Mike Crawat</a></p> </div>
+     <img src="./road.jpg" alt="A van">
+    </div>
+    
+
+
+
+    <div id="frm">
+        <h2> Sign Up To Win Free Road Trip</h2>
+        <p>
+            If you love traveling and free things 
+            signup with us <br> to win a free road trip, 
+            you need to submit the pictures you took in
+            your trips.
+        </p>
+      <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" required>
+            <label for="second-name">Second Name</label>
+            <input type="text" name="second-name" id="second-name" required>
+            
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+            <label for="pass-conf">Confirm Password</label>
+            <input type="password" name="pass-conf" id="pass-conf" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" required>
+            <label for="mail">E-mail</label>
+            <input type="email" name="mail" id="mail" required>
+            <label for="age">How Old Are You?</label>
+            <input type="number" name="age" id="age" min="18" max="75" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>traveling Experience</legend>
+            <label for="last-travel">When Was The Last Time You Traveled?</label>
+            <input type="date" name="last-travel" id="last-travel">
+            <label for="fav-continent">What Is Your Favorite Continent</label>
+            <select name="fav-continent" id="fav-continent">
+                 <option value="asi">Asia</option>
+                 <option value="afr">Africa</option>
+                 <option value="eur">Europe</option>
+                 <option value="nor">North America</option>
+                 <option value="sou">South America</option>
+                 <option value="oce">Oceania</option>
+                 <option value="ant">Antarctica</option>
+            </select>
+            <label for="preference">Do You Prefer?</label>
+            <input type="radio" name="preference" id="preference" value="alone">
+            Travel Alone</input>
+            <input type="radio" name="preference" id="preference" value="friends">
+            Travel With Friends And Family</input>
+            <input type="radio" name="preference" id="preference" value="strangers" >
+            Travel With Stranger People</input>
+            
+            <label for="relation">Tell Us About Your Relation With traveling</label>
+            <textarea name="relation" id="rel" cols="30" rows="10" required></textarea>
+            <label for="imgs">Upload Your Pictures</label>
+            <input type="file" name="imgs" id="imgs"
+            multiple="multiple" accept="image/*"required>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+    </div>
+</main>
+
 </body>
 </html>
